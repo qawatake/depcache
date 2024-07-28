@@ -1,13 +1,7 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-# author: 'Your name or organization here'
+name: 'depcache'
+description: 'cache dependencies'
+author: 'qawatake'
 
-# Add your action's branding here. This will appear on the GitHub Marketplace.
-# branding:
-#   icon: 'heart'
-#   color: 'red'
-
-# Define your inputs here.
 inputs:
   dependency-path:
     description: 'Used to specify the path to a dependency file'
