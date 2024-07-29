@@ -13,7 +13,7 @@ inputs:
     description: 'Used to specify whether to skip saving the cache'
     required: true
   github-token:
-    description: 'Used to delete cache'
+    description: 'Used to fetch workflow info'
     required: true
 
 # Define your outputs here.
