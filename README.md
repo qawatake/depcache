@@ -1,4 +1,4 @@
-# Create a GitHub Action Using TypeScript
+# depcache
 
 [![GitHub Super-Linter](https://github.com/qawatake/depcache/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
 [![CI](https://github.com/qawatake/depcache/actions/workflows/ci.yml/badge.svg)](https://github.com/qawatake/depcache/actions/workflows/ci.yml)
