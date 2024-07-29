@@ -16,10 +16,9 @@ inputs:
     description: 'Used to fetch workflow info'
     required: true
 
-# Define your outputs here.
-# outputs:
-#   time:
-#     description: 'Your output description here'
+outputs:
+  cache-hit:
+    description: 'Whether the cache was hit or not'
 
 runs:
   using: node20

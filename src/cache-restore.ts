@@ -9,7 +9,7 @@ import { State, Outputs } from './constants'
 export const restoreCache = async (
   jobId: string,
   dependencyPath: string,
-  cachePath: string,
+  cachePaths: string[],
   token: string
 ): Promise<void> => {
   const fileHash = await glob.hashFiles(dependencyPath)
@@ -43,7 +43,7 @@ export const restoreCache = async (
 
   core.saveState(State.CachePrimaryKey, primaryKey)
 
-  const cacheKey = await cache.restoreCache([cachePath], primaryKey, [
+  const cacheKey = await cache.restoreCache(cachePaths, primaryKey, [
     secondaryKey
   ])
   core.setOutput(Outputs.CacheHit, Boolean(cacheKey))
