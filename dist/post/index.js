@@ -61559,7 +61559,7 @@ const cachePackages = async (cachePaths) => {
     const state = core.getState(constants_1.State.CacheMatchedKey);
     const primaryKey = core.getState(constants_1.State.CachePrimaryKey);
     if (!primaryKey) {
-        core.info('Primary key was not generated. Please check the log messages above for more errors or information');
+        core.info("Primary key was not generated. Please check the log messages above for more errors or information");
         return;
     }
     const cacheHit = primaryKey === state;
@@ -61637,8 +61637,8 @@ const utils = __importStar(__nccwpck_require__(4427));
 // Catch and log any unhandled exceptions.  These exceptions can leak out of the uploadChunk method in
 // @actions/toolkit when a failed upload closes the file descriptor causing any in-process reads to
 // throw an uncaught exception.  Instead of failing this action, just warn.
-process.on('uncaughtException', e => {
-    const warningPrefix = '[warning]';
+process.on("uncaughtException", (e) => {
+    const warningPrefix = "[warning]";
     core.info(`${warningPrefix}${e.message}`);
 });
 // Added early exit to resolve issue with slow post action step:
@@ -61646,17 +61646,17 @@ process.on('uncaughtException', e => {
 // https://github.com/actions/cache/pull/1217
 async function run(earlyExit) {
     try {
-        await (0, cache_save_1.cachePackages)(utils.getInputAsArray('path'));
+        await (0, cache_save_1.cachePackages)(utils.getInputAsArray("path"));
         if (earlyExit) {
             process.exit(0);
         }
     }
     catch (error) {
-        let message = 'Unknown error!';
+        let message = "Unknown error!";
         if (error instanceof Error) {
             message = error.message;
         }
-        if (typeof error === 'string') {
+        if (typeof error === "string") {
             message = error;
         }
         core.warning(message);
@@ -61702,9 +61702,9 @@ const core = __importStar(__nccwpck_require__(2186));
 function getInputAsArray(name, options) {
     return core
         .getInput(name, options)
-        .split('\n')
-        .map(s => s.replace(/^!\s+/, '!').trim())
-        .filter(x => x !== '');
+        .split("\n")
+        .map((s) => s.replace(/^!\s+/, "!").trim())
+        .filter((x) => x !== "");
 }
 
 
