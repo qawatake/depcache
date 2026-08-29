@@ -1,7 +1,7 @@
 // // some modifications were made to https://github.com/actions/setup-go/tree/v5.0.2/src
 import * as core from "@actions/core";
 import * as cache from "@actions/cache";
-import { State } from "./constants";
+import { State } from "./constants.js";
 
 export const cachePackages = async (cachePaths: string[]): Promise<void> => {
 	const state = core.getState(State.CacheMatchedKey);
